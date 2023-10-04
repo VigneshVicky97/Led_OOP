@@ -10,38 +10,13 @@ class Led
   public:
     Led() {}  // Default Constructor
 
-    Led(byte pin)
-    {
-      this->pin = pin;
-      init();
-    }
+    Led(byte pin);
 
-    void init()
-    {
-      pinMode(pin, OUTPUT);
-    }
-
-    void init(byte defaultState)
-    {
-      if(defaultState == HIGH)
-      {
-        on();
-      }
-      else
-      {
-        off();
-      }
-    }
-
-    void on()
-    {
-      digitalWrite(pin, HIGH);
-    }
-
-    void off()
-    {
-      digitalWrite(pin, LOW);
-    }
+    void init();
+    void init(byte defaultState);
+    
+    void on();
+    void off();
 };
 
 #endif
