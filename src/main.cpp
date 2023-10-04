@@ -1,6 +1,7 @@
 #include "Arduino.h"
 
 #define LED_PIN 2
+#define BLINK_DELAY 250
 
 void setup()
 {
@@ -12,8 +13,8 @@ void loop()
 {
   digitalWrite(LED_PIN, HIGH);
   Serial.println("ON");
-  delay(1000);
+  delay(BLINK_DELAY);
   digitalWrite(LED_PIN, LOW);
   Serial.println("OFF");
-  delay(1000);
+  delay(BLINK_DELAY);
 }
