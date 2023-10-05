@@ -41,5 +41,5 @@ byte Button::getState()
 
 bool Button::isPressed() 
 {
-    return (getState() == HIGH);
+    return (getState() == LOW);
 }
